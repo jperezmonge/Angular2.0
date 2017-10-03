@@ -1,0 +1,27 @@
+<p>Ejemplo 1 </p>
+  <label for="input-name">Escribe tu nombre:</label>
+    <input id="input-name" type="text" #nombre>
+
+<p>{{nombre.value}}</p>
+<input id="añadir" type="button" value="Añadir" (click)="Agregar(nombre.value)">
+<!--<input id="borrar2" type="button" value="BorrarConEvento" (click)="borrarConEvento($event)">-->
+<h2>
+  Lista de Nombre:
+</h2>
+<ul>
+  <li *ngFor="let nombre of aNombre">{{nombre}}</li>
+</ul>
+
+<p>Ejemplo 1 </p>
+<label for="input-name">Escribe tu nombre:</label>
+  <input id="input-name" type="text" [(ngModel)] = "text">
+
+<p>{{nombre.value}}</p>
+<input id="añadir" type="button" value="Añadir" (click)="AgregarText()">
+<!--<input id="borrar2" type="button" value="BorrarConEvento" (click)="borrarConEvento($event)">-->
+<h2 *ngIf="aNombre.length >0">
+Lista de Nombre:
+</h2>
+<ul>
+<li *ngFor="let nombre of aNombre">{{nombre}}</li>
+</ul>

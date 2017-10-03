@@ -1,0 +1,11 @@
+<p>  
+  <label for="input-name">Escribe tu nombre:</label>
+    <input id="input-name" type="text"
+    [ngModel]="sName"
+    (ngModelChange) = 'sName = $event'>
+</p>
+<input id="borrar" type="button" value="Borrar" (click)="borrar()">
+<input id="borrar2" type="button" value="BorrarConEvento" (click)="borrarConEvento($event)">
+<p>
+  Hola {{ sName.toUpperCase() }}
+</p>
